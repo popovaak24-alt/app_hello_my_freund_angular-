@@ -2,11 +2,12 @@
 var express = require('express');
 //Викликаємо express
 var app = express();
-//Налаштовуємо маршрут root(/) URL-адреси
-app.get('/', function (req, res) {
-//При відвідуванні root(/) URL-адреси у відповідь 
-//отримаємо повідомлення "Привіт, мій друже!"
- res.send('Привіт, мій друже!');
+//Налаштовуємо обробник шаблонів
+app.set("view engine", "ejs");
+
+//Відображаємо index.ejs
+app.get("/", function (req, res) {
+    res.render("index");
 });
 //Налаштовуємо сервер для прослуховування порту 3000
 app.listen(3000, function() {
