@@ -1,10 +1,13 @@
 {
   "name": "app-hello-my-freund-angular",
   "version": "0.0.0",
+  "homepage": ".",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist/app_hello_my_freund_angular/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -24,6 +27,7 @@
     "@angular/build": "^21.2.6",
     "@angular/cli": "^21.2.6",
     "@angular/compiler-cli": "^21.2.0",
+    "gh-pages": "^6.3.0",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
